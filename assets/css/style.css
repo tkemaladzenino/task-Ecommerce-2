@@ -13,11 +13,6 @@
       box-sizing: border-box;
   }
 
-  .body {
-      padding: 0;
-      margin: 0;
-
-  }
 
 
   .btn1,
@@ -58,6 +53,7 @@
       letter-spacing: 0px;
       text-align: left;
       color: #000000;
+      margin-top: 34px;
   }
 
   .you {
@@ -67,7 +63,7 @@
       line-height: 55px;
       letter-spacing: 0em;
       text-align: left;
-      margin-top: 30px;
+      margin-top: 36px;
   }
 
   .btn-black {
@@ -221,4 +217,81 @@
       letter-spacing: 0px;
       text-align: center;
       color: 000000;
+  }
+
+  .h2-7 {
+      display: flex;
+      justify-content: center;
+  }
+
+  input {
+      width: 643px;
+      height: 32px;
+      border: none;
+      border-bottom: 2px solid #000000;
+      background: transparent;
+      padding-left: 10px;
+  }
+
+  #btn-subm {
+      width: 91px;
+      height: 32px;
+      padding: 0px 16px 0px 16px;
+      gap: 4px;
+      border: none;
+      background: transparent;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #1E2832;
+  }
+
+  /* ----------------- footer----------------*/
+
+  .ul-f li {
+
+      text-decoration: none;
+      list-style: none;
+
+
+      font-family: Open Sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #1E2832;
+  }
+
+  .ul-f li:nth-child(1) {
+      font-family: Open Sans;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #000000;
+  }
+
+  .footer-1 {
+
+      flex-direction: row;
+      background-color: black;
+
+      align-items: center;
+
+  }
+
+  .footer-1 p {
+      color: #FFFFFF;
+
+  }
+
+  .btn-f {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      width: 150px;
+      height: 32px;
+      padding: 5px 15px 5px 15px;
+      gap: 4px;
+      color: #FFFFFF;
   }
