@@ -97,7 +97,9 @@
       writing-mode: vertical-rl;
       transform: rotate(180deg);
       transform-origin: center bottom;
-      left: 40px;
+      left: 25px;
+      top: 570px;
+
 
   }
 
@@ -222,6 +224,7 @@
   .h2-7 {
       display: flex;
       justify-content: center;
+      padding-bottom: 40px;
   }
 
   input {
@@ -269,6 +272,7 @@
       letter-spacing: 0px;
       text-align: left;
       color: #000000;
+      padding-bottom: 12px;
   }
 
   .footer-1 {
@@ -294,4 +298,37 @@
       padding: 5px 15px 5px 15px;
       gap: 4px;
       color: #FFFFFF;
+  }
+
+
+  /* -----------------products ------------------------------*/
+
+  .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .product img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .info {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 10px;
+  }
+
+  .title {
+      font-weight: bold;
+  }
+
+  .price {
+      color: green;
   }

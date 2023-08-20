@@ -13,15 +13,22 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
 </head>
 
 <body>
 
     <img src="./images/flowerRight.png" style="position: absolute; right: 0;top: 400px;">
     <img src="./images/flowerLeft.png" style="position: absolute; left: 0; top: 480px;">
-    <p class="text-vertical">
-        Explore new and popular styles
-    </p>
+    <div class="text-vertical">
+        <p>
+            Explore new and popular styles
+        </p>
+    </div>
+
+
 
     <div class=" container-fluid pt-5  position-relative" style="background-color: #1E28320D;">
         <div class="row px-5">
@@ -87,7 +94,7 @@
                 <img src="./images/brand-4.png">
             </div>
         </div>
-        <div class="row px-5 pt-5">
+        <div class="row px-5 pt-5 position-relative">
             <div class="col-md-6 col-12 px-5">
                 <img src="./images/card1.png">
             </div>
@@ -122,6 +129,82 @@
                 <button id="btn2">
                     <img src="./images/iconfilter.png">
                     filter</button>
+            </div>
+        </div>
+        <div class="row" id="row1">
+            <div class="col-3" id="col1">
+                <div class="product">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div class="title"></div>
+                        <div class="price"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" id="col2">
+                <div class="product">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div class="title"></div>
+                        <div class="price"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" id="col3">
+                <div class="product">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div class="title"></div>
+                        <div class="price"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" id="col4">
+                <div class="product">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div class="title"></div>
+                        <div class="price"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="row2">
+            <div class="col-3" id="col5">
+                <div class="product">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div class="title"></div>
+                        <div class="price"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" id="col6">
+                <div class="product">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div class="title"></div>
+                        <div class="price"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" id="col7">
+                <div class="product">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div class="title"></div>
+                        <div class="price"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" id="col8">
+                <div class="product">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div class="title"></div>
+                        <div class="price"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -164,142 +247,173 @@
                     show all</button>
             </div>
         </div>
-    </div>
+        <!--    -----------------------       product-3   ------------------------------>
 
 
-    <!--    -----------------------         sixth  bunner      ------------------------------>
 
-    <div class="container-fluid  pt-5 mt-5" style="background-color: #1E28320D;">
-        <div class="row">
-            <div class="col-12 px-5 pb-5">
-                <h2 class="h-6">Follow products and discounts on Instagram</h2>
+        <!--    -----------------------         sixth  bunner      ------------------------------>
+
+        <div class="container-fluid  pt-5 mt-5" style="background-color: #1E28320D;">
+            <div class="row">
+                <div class="col-12  pb-5">
+                    <h2 class="h-6">Follow products and discounts on Instagram</h2>
+                </div>
+                <div class="row px-5">
+                    <div class="col-md-6 col-12 d-flex" style="gap: 24px;">
+                        <img src="./images/card6.png">
+                        <img src="./images/card7.png">
+                        <img src="./images/card8.png">
+                    </div>
+                    <div class="col-md-6 col-12 d-flex" style="gap: 24px">
+                        <img src="./images/card9.png">
+                        <img src="./images/card10.png">
+                        <img src="./images/card11.png">
+                    </div>
+                </div>
             </div>
+            <div class="row py-5 pb-5">
+                <div class="col-12 d-flex justify-content-center flex-column">
+                    <h2 class="h2-7">Or subscribe to the newsletter</h2>
+                    <div class="input-div d-flex justify-content-center" style="gap: 12px;">
+                        <input type="text" placeholder="Email address...">
+                        <button type="submit" id="btn-subm">SUBMIT</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!--    -----------------------         footer    ------------------------------>
+        <div class="container pt-5">
+            <div class="row bg-white p-5">
+                <div class="col-4 d-flex flex-column" style=" gap: 30px;">
+                    <div class="logo-div">
+                        <img src="./images/logo.png">
+                    </div>
+                    <span class="span-footer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing<br>
+                        elit, sed do eiusmod tempor incididunt ut labore et <br>
+                        dolore magna aliqua
+                    </span>
+                    <div class="social d-flex " style="gap: 28px;">
+                        <img src="./images/socialf.png">
+                        <img src="./images/socialt.png">
+                        <img src="./images/socialin.png">
+                        <img src="./images/sociali.png">
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <ul class="ul-f">
+                        <li class="title-f">
+                            CATALOG
+                        </li>
+                        <li>Necklaces</li>
+                        <li>hoodies</li>
+                        <li>Jewelry Box</li>
+                        <li>t-shirt</li>
+                        <li>jacket</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="ul-f">
+                        <li class="title-f">
+                            ABOUT US
+                        </li>
+                        <li>Our Producers</li>
+                        <li>Sitemap</li>
+                        <li>FAQ</li>
+                        <li>About Us</li>
+                        <li>Terms & Conditions</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="ul-f">
+                        <li class="title-f">
+                            CUSTOMER SERVICES
+                        </li>
+                        <li>Contact Us</li>
+                        <li>Track Your Order</li>
+                        <li>Product Care & Repair</li>
+                        <li>Book an Appointment</li>
+                        <li>Shipping & Returns</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid footer-1 pt-2">
             <div class="row px-5">
-                <div class="col-md-6 col-12 ml-5 d-flex" style="gap: 24px;">
-                    <img src="./images/card6.png">
-                    <img src="./images/card7.png">
-                    <img src="./images/card8.png">
+                <div class="col-4 ">
+                    <div class="text-f d-flex align-items-center">
+                        <p>© 2022 Coral , Inc.</p>
+                    </div>
                 </div>
-                <div class="col-md-6 col-12 d-flex" style="gap: 24px">
-                    <img src="./images/card9.png">
-                    <img src="./images/card10.png">
-                    <img src="./images/card11.png">
+                <div class="col-4">
+                    <div class="icon-div">
+                        <img src="./images/icons_payment 1.png">
+                    </div>
                 </div>
+                <div class="col-4 d-flex" style="justify-content: flex-end;">
+                    <button class="btn-f">
+                        Scroll to top
+                        <a href="#"><img src="./images/v6-icon.png"></a>
+                    </button>
+                </div>
+
             </div>
         </div>
-        <div class="row py-5 pb-5">
-            <div class="col-12 d-flex justify-content-center flex-column">
-                <h2 class="h2-7">Or subscribe to the newsletter</h2>
-                <div class="input-div d-flex justify-content-center" style="gap: 12px;">
-                    <input type="text" placeholder="Email address...">
-                    <button type="submit" id="btn-subm">SUBMIT</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <!--    -----------------------         footer    ------------------------------>
-    <div class="container">
-        <div class="row bg-white p-5">
-            <div class="col-4 d-flex flex-column" style=" gap: 30px;">
-                <div class="logo-div">
-                    <img src="./images/logo.png">
-                </div>
-                <span class="span-footer">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing<br>
-                    elit, sed do eiusmod tempor incididunt ut labore et <br>
-                    dolore magna aliqua
-                </span>
-                <div class="social d-flex " style="gap: 28px;">
-                    <img src="./images/socialf.png">
-                    <img src="./images/socialt.png">
-                    <img src="./images/socialin.png">
-                    <img src="./images/sociali.png">
-
-                </div>
-            </div>
-            <div class="col-2">
-                <ul class="ul-f">
-                    <li class="title-f">
-                        CATALOG
-                    </li>
-                    <li>Necklaces</li>
-                    <li>hoodies</li>
-                    <li>Jewelry Box</li>
-                    <li>t-shirt</li>
-                    <li>jacket</li>
-                </ul>
-            </div>
-            <div class="col-3">
-                <ul class="ul-f">
-                    <li class="title-f">
-                        ABOUT US
-                    </li>
-                    <li>Our Producers</li>
-                    <li>Sitemap</li>
-                    <li>FAQ</li>
-                    <li>About Us</li>
-                    <li>Terms & Conditions</li>
-                </ul>
-            </div>
-            <div class="col-3">
-                <ul class="ul-f">
-                    <li class="title-f">
-                        CUSTOMER SERVICES
-                    </li>
-                    <li>Contact Us</li>
-                    <li>Track Your Order</li>
-                    <li>Product Care & Repair</li>
-                    <li>Book an Appointment</li>
-                    <li>Shipping & Returns</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-    <div class="container-fluid footer-1 pt-2">
-        <div class="row ">
-            <div class="col-4">
-                <div class="text-f d-flex align-items-center">
-                    <p>© 2022 Coral , Inc.</p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="icon-div">
-                    <img src="./images/icons_payment 1.png">
-                </div>
-            </div>
-            <div class="col-4 d-flex" style="justify-content: flex-end;">
-                <button class="btn-f">
-                    Scroll to top
-                    <a href="#"><img src="./images/v6-icon.png"></a>
-                </button>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 
 <script>
+
+    axios.get("https://fakestoreapi.com/products")
+        .then(response => {
+            const products = response.data.slice(0, 4); // Get the first four products
+
+            // Populate the columns with product information
+            for (let i = 0; i < products.length; i++) {
+                const product = products[i];
+                const imageElement = document.querySelector(`#row1 .col-3:nth-child(${i + 1}) .image`);
+                const titleElement = document.querySelector(`#row1 .col-3:nth-child(${i + 1}) .title`);
+                const priceElement = document.querySelector(`#row1 .col-3:nth-child(${i + 1}) .price`);
+
+
+                // Populate image, title, and price
+                imageElement.innerHTML = `<img src="${product.image}" alt="${product.title}" />`;
+                titleElement.textContent = product.title;
+                priceElement.textContent = `$${product.price.toFixed(2)}`;
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching products:", error);
+        });
+
+    // Fetch products for the second row
+    axios.get("https://fakestoreapi.com/products")
+        .then(response => {
+            const products = response.data.slice(4, 8); // Get the next four products
+
+            // Populate the columns with product information for the second row
+            for (let i = 0; i < products.length; i++) {
+                const product = products[i];
+                const imageElement = document.querySelector(`#row2 .col-3:nth-child(${i + 1}) .image`);
+                const titleElement = document.querySelector(`#row2 .col-3:nth-child(${i + 1}) .title`);
+                const priceElement = document.querySelector(`#row2 .col-3:nth-child(${i + 1}) .price`);
+
+                // Populate image, title, and price
+                imageElement.innerHTML = `<img src="${product.image}" alt="${product.title}" />`;
+                titleElement.textContent = product.title;
+                priceElement.textContent = `$${product.price.toFixed(2)}`;
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching products:", error);
+        });
+
 
 
 
