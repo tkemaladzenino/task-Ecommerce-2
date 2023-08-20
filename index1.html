@@ -372,47 +372,31 @@
 
     axios.get("https://fakestoreapi.com/products")
         .then(response => {
-            const products = response.data.slice(0, 4); // Get the first four products
+            const allProducts = response.data; // Get all products
 
-            // Populate the columns with product information
-            for (let i = 0; i < products.length; i++) {
-                const product = products[i];
-                const imageElement = document.querySelector(`#row1 .col-3:nth-child(${i + 1}) .image`);
-                const titleElement = document.querySelector(`#row1 .col-3:nth-child(${i + 1}) .title`);
-                const priceElement = document.querySelector(`#row1 .col-3:nth-child(${i + 1}) .price`);
+            // Populate products in both rows
+            for (let row = 1; row <= 2; row++) {
+                for (let col = 1; col <= 4; col++) {
+                    const productIndex = (row - 1) * 4 + (col - 1);
+                    const product = allProducts[productIndex];
+                    const productContainer = document.querySelector(`#row${row} .col-3:nth-child(${col}) .product`);
+                    const imageElement = productContainer.querySelector('.image');
+                    const titleElement = productContainer.querySelector('.title');
+                    const priceElement = productContainer.querySelector('.price');
 
 
-                // Populate image, title, and price
-                imageElement.innerHTML = `<img src="${product.image}" alt="${product.title}" />`;
-                titleElement.textContent = product.title;
-                priceElement.textContent = `$${product.price.toFixed(2)}`;
+                    // Populate image, title, price, and description
+                    imageElement.innerHTML = `<img src="${product.image}" alt="${product.title}" />`;
+                    titleElement.textContent = product.title;
+                    priceElement.textContent = `$${product.price.toFixed(2)}`;
+
+                }
             }
         })
         .catch(error => {
             console.error("Error fetching products:", error);
         });
 
-    // Fetch products for the second row
-    axios.get("https://fakestoreapi.com/products")
-        .then(response => {
-            const products = response.data.slice(4, 8); // Get the next four products
-
-            // Populate the columns with product information for the second row
-            for (let i = 0; i < products.length; i++) {
-                const product = products[i];
-                const imageElement = document.querySelector(`#row2 .col-3:nth-child(${i + 1}) .image`);
-                const titleElement = document.querySelector(`#row2 .col-3:nth-child(${i + 1}) .title`);
-                const priceElement = document.querySelector(`#row2 .col-3:nth-child(${i + 1}) .price`);
-
-                // Populate image, title, and price
-                imageElement.innerHTML = `<img src="${product.image}" alt="${product.title}" />`;
-                titleElement.textContent = product.title;
-                priceElement.textContent = `$${product.price.toFixed(2)}`;
-            }
-        })
-        .catch(error => {
-            console.error("Error fetching products:", error);
-        });
 
 
 
