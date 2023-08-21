@@ -86,7 +86,7 @@
 
     <div class="container-fluid bg-white">
         <div class="row mx-5 py-5 px-4 ">
-            <div class="col-12 d-flex" style="gap: 74px;">
+            <div class="col-md-6 col-12 d-flex" style="gap: 12%;">
                 <img src=" ./images/brand-1.png">
                 <img src="./images/brand-2.png">
                 <img src="./images/brand-3.png">
@@ -95,30 +95,38 @@
             </div>
         </div>
         <div class="row px-5 pt-5 position-relative">
-            <div class="col-md-6 col-12 px-5">
+            <div class="col-md-6 col-sm-12 px-5">
                 <img src="./images/card1.png">
             </div>
-            <div class="col-md-6 col-12">
-                <div class="imeges1 px-3 d-flex" style="gap: 20px; padding-bottom: 6px;">
+            <div class="col-md-6 col-12 pr-0">
+                <div class="imeges-two d-flex " style="gap: 20px;">
                     <img src="./images/card2.png">
                     <img src="./images/card4.png">
                 </div>
-                <div class="imeges2 p-3 d-flex" style="gap: 20px;">
-                    <img src=" ./images/card3.png">
-                    <img src="./images/card5.png">
+                <div class="row pt-4">
+                    <div class="col-12">
+                        <div class="imeges-two d-flex " style="gap: 20px;">
+                            <img src=" ./images/card3.png">
+                            <img src="./images/card5.png">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
     </div>
 
+
+
     <!--    -----------------------         third    bunner      ------------------------------>
-    <div class="container pt-5 bg-white">
+    <div class="container pt-5 pb-5 bg-white">
         <div class="row">
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12  pt-5 d-flex justify-content-center">
                 <h2>Or subscribe to the newsletter</h2>
             </div>
         </div>
-        <div class="row pt-1 px-5">
+        <div class="row pt-1 px-2 pb-2">
             <div class="col-md-6 col-12 prod d-flex flex-row" style="gap: 20px;">
                 <h6>all products</h6>
                 <p>t-shirt</p>
@@ -169,7 +177,7 @@
                 </div>
             </div>
         </div>
-        <div class="row" id="row2">
+        <div class="row pt-5 pb-5" id="row2">
             <div class="col-3" id="col5">
                 <div class="product">
                     <div class="image"></div>
@@ -249,7 +257,7 @@
         </div>
         <!--    -----------------------       product-3   ------------------------------>
 
-        <div class="row" id="row3">
+        <div class="row pb-5" id="row3">
             <div class="col-3" id="col9">
                 <div class="product">
                     <div class="image"></div>
@@ -291,35 +299,44 @@
 
     <!--    -----------------------         sixth  bunner      ------------------------------>
 
-    <div class="container-fluid  pt-5 mt-5" style="background-color: #1E28320D;">
-        <div class="row">
+    <div class="container-fluid px-5 pt-5 mt-5" style="background-color: #1E28320D;">
+        <div class="row p-5">
             <div class="col-12  pb-5">
                 <h2 class="h-6">Follow products and discounts on Instagram</h2>
             </div>
-            <div class="row px-5">
-                <div class="col-md-6 col-12 d-flex" style="gap: 24px;">
-                    <img src="./images/card6.png">
-                    <img src="./images/card7.png">
-                    <img src="./images/card8.png">
-                </div>
-                <div class="col-md-6 col-12 d-flex" style="gap: 24px">
-                    <img src="./images/card9.png">
-                    <img src="./images/card10.png">
-                    <img src="./images/card11.png">
-                </div>
+        </div>
+        <div class="row px-5">
+            <div class="col-2">
+                <img src="./images/card6.png">
+            </div>
+            <div class="col-2">
+                <img src="./images/card7.png">
+            </div>
+            <div class="col-2">
+                <img src="./images/card8.png">
+            </div>
+            <div class="col-2">
+                <img src="./images/card9.png">
+            </div>
+            <div class="col-2">
+                <img src="./images/card10.png">
+            </div>
+            <div class="col-2">
+                <img src="./images/card11.png">
             </div>
         </div>
-        <div class="row py-5 pb-5">
-            <div class="col-12 d-flex justify-content-center flex-column">
+
+        <div class="row p-5">
+            <div class="col-12 pb-4 d-flex justify-content-center flex-column">
                 <h2 class="h2-7">Or subscribe to the newsletter</h2>
                 <div class="input-div d-flex justify-content-center" style="gap: 12px;">
                     <input type="text" placeholder="Email address...">
                     <button type="submit" id="btn-subm">SUBMIT</button>
                 </div>
             </div>
-
         </div>
     </div>
+
 
 
 
@@ -408,25 +425,22 @@
 
 <script>
 
-    // Function to shuffle an array randomly
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    }
+    // Array of product IDs you want to fetch
+    const productIds = [2, 3, 4, 20, 7, 8, 10, 11, 19, 15, 16, 17]; // Example IDs, you can modify this
 
     axios.get("https://fakestoreapi.com/products")
         .then(response => {
             const allProducts = response.data; // Get all products
-            const shuffledProducts = shuffleArray(allProducts); // Shuffle the products randomly
 
-            // Populate products in rows
-            for (let row = 1; row <= 3; row++) {
-                for (let col = 1; col <= 4; col++) {
-                    const productIndex = (row - 1) * 4 + (col - 1);
-                    const product = shuffledProducts[productIndex];
+            // Populate products by the specified IDs
+            for (let i = 0; i < productIds.length; i++) {
+                const productId = productIds[i];
+                const product = allProducts.find(item => item.id === productId);
+                if (product) {
+                    // Calculate the row and column based on the index (i)
+                    const row = Math.floor(i / 4) + 1; // Calculate the row (1, 2, 3, ...)
+                    const col = (i % 4) + 1; // Calculate the column (1, 2, 3, 4)
+
                     const productContainer = document.querySelector(`#row${row} .col-3:nth-child(${col}) .product`);
                     const imageElement = productContainer.querySelector('.image');
                     const titleElement = productContainer.querySelector('.title');

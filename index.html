@@ -17,9 +17,9 @@
 
 <body>
     <div class="container mt-5">
-        <div class="row justify-content center">
+        <div class="row justify-content-center">
             <div class="col-md-6 col-12">
-                <form action="#" onsubmit="return validate()">
+                <form action="index1.html" onsubmit="return validate()">
                     <div class="form-group mb-3">
                         <label for="email" class="mb-2">Email</label>
                         <input type="text" placeholder="Enter email" class="form-control mb-1" id="email">
@@ -30,40 +30,38 @@
                     </div>
 
                     <div class="alert alert-success d-none" id="success">
-                        <strong> validation was successful</strong>
+                        <strong>Validation was successful</strong>
                     </div>
                     <div class="form-group mb-3">
                         <label for="password" class="mb-2">Password</label>
                         <input type="password" placeholder="Password" class="form-control" id="password">
 
-
                         <div class="alert alert-danger d-none" id="passwordDanger">
                             <strong>Enter password</strong>
                         </div>
 
-                        <div class="alert alert-success d-none" id="passwordsuccess">
-                            <strong>validation was successful</strong>
+                        <div class="alert alert-success d-none" id="passwordSuccess">
+                            <strong>Validation was successful</strong>
                         </div>
                     </div>
                     <div class="d-grid">
-                        <input type="button" value="autorisation" class="btn btn-primary" onclick="validacia()">
+                        <input type="submit" value="Authorization" class="btn btn-primary" onclick="validate()">
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
-
 </body>
 
 <script>
 
-    function valitate() {
-        var email = document.getElementById("email");
-        var password = document.getElementById("password");
 
-        var regex1 = new RegExp("^[a-zA-Z]+@[a-z]{2,5}\.[a-z]{2,3}$", "gim");
-        var regex2 = new RegExp("^[a-zA-Z]+@[a-z]{2,5}\.[a-z]{2,3}$", "gim");
+    function valitate() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        var regexp1 = new RegExp("^[a-zA-Z]+\.[a-zA-Z]+@[a-z]{2,5}\.[a-z]{2,3}$", "gim");
+        var regexp2 = new RegExp("^[a-zA-Z]+@[a-z]{2,5}\.[a-z]{2,3}$", "gim");
 
         var user_email = "nino@gmail.com";
         var user_password = "nino17";
@@ -72,20 +70,19 @@
         if (!regexp1.test(email) || !regexp2.test(email) && email != user_email) {
             document.getElementById('danger').classlist.remove("d-none");
 
-        } else if (password.lenght == 0) {
+        } else if (password.length == 0) {
             document.getElementById("success").classList.remove("d-none");
             document.getElementById('danger').classlist.remove("d-none");
 
             document.getElementById("passwordDanger").classlist.remove("d-none");
         } else {
             document.getElementById("passwordDanger").classlist.add("d-none");
-            document.getElementById("passworsuccess").classlist.remove("d-none");
+            document.getElementById("passwordSuccess").classlist.remove("d-none");
 
-            window.location.href = "#";
+            window.location.href = "index1.html";
         }
 
     }
-
 
 </script>
 
