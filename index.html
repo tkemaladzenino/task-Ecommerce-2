@@ -55,29 +55,31 @@
 
 <script>
 
-
     function validate() {
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
 
-        var regexp = new RegExp("^[a-zA-Z]+@[a-z]{2,5}\.[a-z]{2,3}$", "gim");
+        var regexp = new RegExp("^[a-zA-Z]+@[a-z]{2,5}\\.[a-z]{2,3}$", "gim");
 
         if (!regexp.test(email)) {
             document.getElementById('danger').classList.remove("d-none");
-
-        } else if (password.length == 0) {
-            document.getElementById("success").classList.remove("d-none");
-            document.getElementById('danger').classList.add("d-none");
-
-            document.getElementById("passwordDanger").classList.remove("d-none");
+            document.getElementById("success").classList.add("d-none");
         } else {
-            document.getElementById("passwordDanger").classList.add("d-none");
-            document.getElementById("passwordSuccess").classList.remove("d-none");
+            document.getElementById('danger').classList.add("d-none");
+            document.getElementById("success").classList.remove("d-none");
 
-            window.location.href = "index1.html";
+            if (password.length === 0) {
+                document.getElementById("passwordDanger").classList.remove("d-none");
+                document.getElementById("passwordSuccess").classList.add("d-none");
+            } else {
+                document.getElementById("passwordDanger").classList.add("d-none");
+                document.getElementById("passwordSuccess").classList.remove("d-none");
+
+                window.location.href = "index1.html";
+            }
         }
-
     }
+
 
 </script>
 
