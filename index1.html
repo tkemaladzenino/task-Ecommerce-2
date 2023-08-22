@@ -23,9 +23,9 @@
     <img src="./images/flowerRight.png" style="position: absolute; right: 0;top: 400px;">
     <img src="./images/flowerLeft.png" style="position: absolute; left: 0; top: 480px;">
     <div class="text-vertical">
-        <p>
+        <span>
             Explore new and popular styles
-        </p>
+        </span>
     </div>
 
 
@@ -86,7 +86,7 @@
 
     <div class="container-fluid bg-white">
         <div class="row mx-5 py-5 px-4 ">
-            <div class="col-md-6 col-12 d-flex" style="gap: 12%;">
+            <div class="col-6  d-flex" style="gap: 12%;">
                 <img src=" ./images/brand-1.png">
                 <img src="./images/brand-2.png">
                 <img src="./images/brand-3.png">
@@ -95,7 +95,7 @@
             </div>
         </div>
         <div class="row px-5 pt-5 position-relative">
-            <div class="col-md-6 col-sm-12 px-5">
+            <div class="col-md-6 col-12 px-5">
                 <img src="./images/card1.png">
             </div>
             <div class="col-md-6 col-12 pr-0">
@@ -306,7 +306,7 @@
             </div>
         </div>
         <div class="row px-5">
-            <div class="col-2">
+            <div class="col-2 ">
                 <img src="./images/card6.png">
             </div>
             <div class="col-2">
@@ -425,28 +425,26 @@
 
 <script>
 
-    // Array of product IDs you want to fetch
-    const productIds = [2, 3, 4, 20, 7, 8, 10, 11, 19, 15, 16, 17]; // Example IDs, you can modify this
+
+    const productIds = [2, 3, 4, 20, 7, 8, 10, 11, 19, 15, 16, 17];
 
     axios.get("https://fakestoreapi.com/products")
         .then(response => {
-            const allProducts = response.data; // Get all products
+            const allProducts = response.data;
 
-            // Populate products by the specified IDs
             for (let i = 0; i < productIds.length; i++) {
                 const productId = productIds[i];
                 const product = allProducts.find(item => item.id === productId);
                 if (product) {
-                    // Calculate the row and column based on the index (i)
-                    const row = Math.floor(i / 4) + 1; // Calculate the row (1, 2, 3, ...)
-                    const col = (i % 4) + 1; // Calculate the column (1, 2, 3, 4)
+
+                    const row = Math.floor(i / 4) + 1;
+                    const col = (i % 4) + 1;
 
                     const productContainer = document.querySelector(`#row${row} .col-3:nth-child(${col}) .product`);
                     const imageElement = productContainer.querySelector('.image');
                     const titleElement = productContainer.querySelector('.title');
                     const priceElement = productContainer.querySelector('.price');
 
-                    // Populate image, title, and price
                     imageElement.innerHTML = `<img src="${product.image}" alt="${product.title}" />`;
                     titleElement.textContent = product.title;
                     priceElement.textContent = `$${product.price.toFixed(2)}`;
