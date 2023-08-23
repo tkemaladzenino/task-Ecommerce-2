@@ -162,7 +162,12 @@
                 document.getElementById("passwordDanger").classList.add("d-none");
                 document.getElementById("passwordSuccess").classList.remove("d-none");
 
-                window.location.href = "index1.html";
+                var delayTime = 1000; // 1 seconds
+                setTimeout(function () {
+                    window.location.href = "index1.html";
+                }, delayTime);
+
+
             }
         }
     }
