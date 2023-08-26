@@ -95,14 +95,19 @@
   }
 
   .text-vertical {
-
-
       position: absolute;
       writing-mode: vertical-rl;
       transform: rotate(180deg);
       transform-origin: center bottom;
-      left: 25px;
+      left: 16px;
       top: 624px;
+  }
+
+  @media screen and (max-width: 768px) {
+
+      .text-vertical {
+          top: 570px;
+      }
   }
 
   .text-vertical span {
