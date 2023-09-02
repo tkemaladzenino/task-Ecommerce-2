@@ -17,11 +17,15 @@
   /*   ---------authorization ---------*/
 
 
+  .custom-navbar-toggler span {
+      display: block;
+      width: 10px;
+      height: 2px;
+      background-color: #333;
+      margin-bottom: 2q;
+      transition: background-color 0.3s;
 
-  /*  ----------------------*/
-
-
-
+  }
 
   .btn1,
   .btn2 {
@@ -45,6 +49,8 @@
       }
   }
 
+
+
   .hr1 {
       border: 1px solid #E3E3E3;
   }
@@ -56,6 +62,14 @@
 
   .ul-1 li {
       display: inline-block;
+
+      font-family: Open Sans;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #000000;
   }
 
 
